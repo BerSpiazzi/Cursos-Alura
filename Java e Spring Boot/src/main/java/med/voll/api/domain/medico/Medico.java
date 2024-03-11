@@ -1,4 +1,4 @@
-package med.voll.api.model.medico;
+package med.voll.api.domain.medico;
 
 import static java.util.Objects.nonNull;
 
@@ -16,9 +16,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import med.voll.api.enumeration.EspecialidadesEnum;
-import med.voll.api.model.endereco.Endereco;
-import med.voll.api.record.DadosAtualizacaoMedicos;
-import med.voll.api.record.DadosCadastroMedico;
+import med.voll.api.domain.endereco.Endereco;
+import med.voll.api.record.medico.DadosAtualizacaoMedicos;
+import med.voll.api.record.medico.DadosCadastroMedico;
 
 @Table(name = "medicos")
 @Entity(name = "Medico")

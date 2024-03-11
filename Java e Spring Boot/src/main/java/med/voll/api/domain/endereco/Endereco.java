@@ -1,4 +1,4 @@
-package med.voll.api.model.endereco;
+package med.voll.api.domain.endereco;
 
 import static java.util.Objects.nonNull;
 
@@ -7,7 +7,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import med.voll.api.record.DadosEndereco;
+import med.voll.api.record.endereco.DadosEndereco;
 
 @Embeddable
 @Getter

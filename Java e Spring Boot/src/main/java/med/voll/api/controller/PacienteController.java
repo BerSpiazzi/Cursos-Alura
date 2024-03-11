@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import jakarta.validation.Valid;
-import med.voll.api.model.paciente.Paciente;
-import med.voll.api.model.paciente.PacienteRepository;
-import med.voll.api.record.DadosCadastroPaciente;
+import med.voll.api.domain.paciente.Paciente;
+import med.voll.api.domain.paciente.PacienteRepository;
+import med.voll.api.record.paciente.DadosCadastroPaciente;
 
 @RestController
 @RequestMapping("pacientes")
