@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.time.Instant;
-import java.util.Date;
 
 @Service
 public class TokenService {
@@ -24,8 +23,20 @@ public class TokenService {
                     .withSubject(usuario.getLogin())
                     .withExpiresAt(ExpirationDate())
                     .sign(algoritmo);
-        } catch (JWTCreationException exception){
+        } catch (JWTCreationException exception) {
             throw new RuntimeException("erro ao gerrar token jwt", exception);
+        }
+    }
+
+    public String getSubject(String token) {
+        try {
+
+            return JWT.require(Algorithm.HMAC256(secret))
+                    .build()
+                    .verify(token)
+                    .getSubject();
+        } catch (Exception e) {
+            throw new RuntimeException("Token inválido", e);
         }
     }
 
