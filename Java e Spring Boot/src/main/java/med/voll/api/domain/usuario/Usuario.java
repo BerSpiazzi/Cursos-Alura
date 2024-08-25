@@ -1,10 +1,10 @@
 package med.voll.api.domain.usuario;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import lombok.*;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -15,14 +15,13 @@ import java.util.List;
 @Table(name = "usuarios")
 @Entity(name = "Usuario")
 @Getter
-@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
 public class Usuario implements UserDetails {
 
     @Id
-    @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String login;
     private String senha;
