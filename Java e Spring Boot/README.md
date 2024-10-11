@@ -41,10 +41,10 @@ As seguintes tecnologias foram utilizadas no desenvolvimento da API Rest do proj
 
 ---
 
-## 📝 Licença
-
-Projeto desenvolvido por [Alura](https://www.alura.com.br) e utilizado nos cursos de Spring Boot.
-
-Instrutor: [Rodrigo Ferreira](https://cursos.alura.com.br/user/rodrigo-ferreira) 
-
----
+## 🚀 Como executar o projeto
+java 
+-Dspring.profiles.active=prod 
+-DDATASOURCE_URL=
+-DATASOURCE_USERNAME=
+-DDATASOURCE_PASSWORD=
+-jar target/api-0.0.1-SNAPSHOT.jar    
