@@ -49,14 +49,12 @@ class MedicoRepositoryTest {
     @Test
     @DisplayName("Deveria devolver medico quando ele estiver disponivel na data")
     void escolherMedicoAleatorioLivreNaDataCenario2() {
-        //given or arrange
+
         var proximaSegundaAs10 = LocalDate.now().with(TemporalAdjusters.next(DayOfWeek.MONDAY)).atTime(10, 0);
         var medico = cadastrarMedico("Medico", "medico@voll.med", "123456", Especialidade.CARDIOLOGIA);
 
-        //when or act
         var medicoLivre = medicoRepository.escolherMedicoAleatorioLivreNaData(Especialidade.CARDIOLOGIA, proximaSegundaAs10);
 
-        //then or assert
         assertNotNull(medicoLivre);
         assertEquals(medicoLivre, medico);
 
